@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<p>Grade : </p>
+	<form>
+		<input type="number" id="score" >
+	</form>
+
+<br>
+<button onclick ="try()">try it</button>
+<p id ="result"></p>
+
+<script>
+	function try() {
+	var score;
+    score = parseInt(document.getElementById("score").value);
+    
+    if (score >= 60) {
+    	document.getElementById("result").innerHTML="及格";
+  }else{
+      	document.getElementById("result").innerHTML = "不及格";
+    }
+  };
+
+</script>
+</body>
+</html>
