@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title></title>
+</head>
 <body>
-
-<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;">
-</canvas>
+	<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;">
 
 <script>
 var c = document.getElementById("myCanvas");
@@ -13,14 +14,18 @@ var grd = ctx.createLinearGradient(0,0,200,0);
 grd.addColorStop(0,"skyblue");
 // Fill with gradient
 ctx.fillStyle = grd;
-ctx.fillRect(0,0,150,80);
-function myFunction() {
-  setInterval(function(){
-  		
+ctx.fillRect(0,0,150,0);
+var second = 0;
+	var MyInterval = setInterval(function(){
+		ctx.clearRect(10,second,80,80);
+		second +=10;
+		if (second > 220){
+			second = 0;
+		}
+		ctx.fillRect(10,second,80,80);
+	},500);	
 
-  }, 3000);
-}
+
 </script>
 </body>
 </html>
-

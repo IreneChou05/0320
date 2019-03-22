@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title></title>
+</head>
 <body>
-	<p>Grade : </p>
+<p>Score : </p>
 	<form>
-		<input type="number" id="score" >
-	</form>
-
+	<input type="number" id="score">
+</form>
 <br>
-<button onclick ="try()">try it</button>
-<p id ="result"></p>
+<button type="button" onclick=" compute()">Try It</button>
+<p id="result"></p>
 
 <script>
-	function try() {
-	var score;
-    score = parseInt(document.getElementById("score").value);
-    
-    if (score >= 60) {
-    	document.getElementById("result").innerHTML="及格";
-  }else{
-      	document.getElementById("result").innerHTML = "不及格";
-    }
-  };
+	function compute(){
+		var score;
+		score = parseInt(document.getElementById("score").value);
+	if(score >100){
+		document.getElementById("result").innerHTML="ERROR"
+	}else if (score>=60) {
+		document.getElementById("result").innerHTML="PASS"
+	}else{
+		document.getElementById("result").innerHTML="FAIL"
+	}};
+</script>
+</body>
+</html>
 
+
+
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+// Create gradient
+var grd = ctx.createLinearGradient(0,0,200,0);
+grd.addColorStop(0,"skyblue");
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(0,0,150,80);
+function myFunction() {
+  setInterval(function(){
+  		
+
+  }, 3000);
+}
 </script>
 </body>
 </html>
