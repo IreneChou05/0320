@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <meta charset="utf-8">
+<body>
+<P>x=</P>
+<input type="number" id="MyData" value="1">
+<p>y=</p>
+<input type="number" id="MyData2" value="1">
+
+<br>
+<script>
+
+function add() {
+	var x,y
+	x = parseFloat(document.getElementById("MyData").value);
+	y = parseFloat(document.getElementById("MyData2").value);
+	document.getElementById("resultA").innerHTML = x + y; 
+}
+
+function minus(){
+	var x,y
+	x = parseFloat(document.getElementById("MyData").value);
+	y = parseFloat(document.getElementById("MyData2").value);
+	document.getElementById("resultm").innerHTML = x - y; 
+}
+
+function multiply(){
+	var x,y
+	x = parseFloat(document.getElementById("MyData").value);
+	y = parseFloat(document.getElementById("MyData2").value);
+	document.getElementById("resultM").innerHTML = x * y; 
+}
+
+function divided(){
+	var x,y
+	x = parseFloat(document.getElementById("MyData").value);
+	y = parseFloat(document.getElementById("MyData2").value);
+	document.getElementById("resultD").innerHTML = x / y; 
+}
+
+</script>
+<button onclick ="add()">加</button>
+<button onclick ="minus()">減</button>
+<button onclick ="multiply()">乘</button>
+<button onclick ="divided()">除</button>
+<button>清除</button>
+<h5>計算結果:</h5>
+
+<output id = "resultA"></output>
+<output id = "resultm"></output>
+<output id = "resultM"></output>
+<output id = "resultD"></output>
+
+
+</div>
+</body>
+</html>
